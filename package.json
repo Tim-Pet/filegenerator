@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Tim-Pet/filegenerator/issues"
   },
-  "homepage": "https://github.com/Tim-Pet/filegenerator#readme"
+  "homepage": "https://github.com/Tim-Pet/filegenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.0"
+  }
 }
