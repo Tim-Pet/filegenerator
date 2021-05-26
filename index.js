@@ -39,8 +39,7 @@ const questions = [
   {
     type: 'input',
     name: 'fileName',
-    message:
-      'Which function and file would you like to create? Seperate by comma!',
+    message: 'Which file would you like to create?',
   },
   {
     type: 'checkbox',
