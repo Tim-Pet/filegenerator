@@ -1,13 +1,17 @@
 const writeFile = require('./writeFile')
-const readline = require('readline')
+const inquirer = require('inquirer')
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-})
+const questions = [
+  {
+    type: 'input',
+    name: 'file',
+    message:
+      'Which function and file would you like to create? Seperate by comma!',
+  },
+]
 
-rl.question('Which function and file would you like to create?', answer => {
-  answer.split(',').forEach(answerEntry => writeFile(answerEntry.trim()))
-
-  rl.close()
+inquirer.prompt(questions).then(answers => {
+  answers['file']
+    .split(',')
+    .forEach(answerEntry => writeFile(answerEntry.trim()))
 })
